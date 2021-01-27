@@ -1,48 +1,52 @@
+import 'package:AppDemo/modules/home/home.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
   Login();
 
-  final loginAppleButton = RaisedButton(
-    onPressed: () {},
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Image(
-            image: AssetImage('assets/images/IconApple.png'),
-            height: 15.0,
-            fit: BoxFit.fitHeight),
-        SizedBox(width: 10.0),
-        Text('Login with Apple',
-            style: TextStyle(fontSize: 20.0, color: Colors.white))
-      ],
-    ),
-    shape:
-        RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-    color: Colors.black,
-  );
-
-  final loginFacebookButton = RaisedButton(
-    onPressed: () {},
-    child: const Text('Facebook',
-        style: TextStyle(fontSize: 20.0, color: Colors.white)),
-    shape:
-        RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-    color: Color.fromRGBO(30, 86, 42, 1),
-  );
-
-  final loginGoogleButton = RaisedButton(
-    onPressed: () {},
-    child: const Text('Google',
-        style: TextStyle(fontSize: 20, color: Color.fromRGBO(30, 86, 42, 1))),
-    shape: RoundedRectangleBorder(
-        borderRadius: new BorderRadius.circular(30.0),
-        side: BorderSide(color: Color.fromRGBO(30, 86, 42, 1))),
-    color: Colors.white,
-  );
-
   @override
   Widget build(BuildContext context) {
+    final loginAppleButton = RaisedButton(
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image(
+              image: AssetImage('assets/images/IconApple.png'),
+              height: 15.0,
+              fit: BoxFit.fitHeight),
+          SizedBox(width: 10.0),
+          Text('Login with Apple',
+              style: TextStyle(fontSize: 20.0, color: Colors.white))
+        ],
+      ),
+      shape:
+          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+      color: Colors.black,
+    );
+
+    final loginFacebookButton = RaisedButton(
+      onPressed: () {},
+      child: const Text('Facebook',
+          style: TextStyle(fontSize: 20.0, color: Colors.white)),
+      shape:
+          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+      color: Color.fromRGBO(30, 86, 42, 1),
+    );
+
+    final loginGoogleButton = RaisedButton(
+      onPressed: () {},
+      child: const Text('Google',
+          style: TextStyle(fontSize: 20, color: Color.fromRGBO(30, 86, 42, 1))),
+      shape: RoundedRectangleBorder(
+          borderRadius: new BorderRadius.circular(30.0),
+          side: BorderSide(color: Color.fromRGBO(30, 86, 42, 1))),
+      color: Colors.white,
+    );
+
     double widthButton = MediaQuery.of(context).size.width * 0.8;
     return Stack(
       children: <Widget>[
