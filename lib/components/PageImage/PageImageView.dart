@@ -45,7 +45,6 @@ class _PageImageViewState extends State<PageImageView> {
       double offset = MediaQuery.of(context).size.width * this.current;
       _scrollController.animateTo(offset,
           duration: Duration(milliseconds: 250), curve: Curves.ease);
-      print("set current ${this.current}");
     });
   }
 
@@ -96,7 +95,6 @@ class _PageControlState extends State<PageControlView> {
   _PageControlState(this.numberItem);
 
   updateState({int current}) {
-    print("update current ${current}");
     setState(() {
       this.current = current;
     });
@@ -115,7 +113,6 @@ class _PageControlState extends State<PageControlView> {
           result.addAll([SizedBox(width: 5), DotWidget(isCurrent)]);
         }
       }
-      print(result.length);
       return result;
     }
   }

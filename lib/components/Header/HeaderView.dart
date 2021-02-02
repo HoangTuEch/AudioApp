@@ -25,7 +25,7 @@ class _HeaderViewState extends State<HeaderViewWidget> {
             ),
           ),
           Expanded(
-              child: Container(
+            child: Container(
             height: 30,
             padding: EdgeInsets.only(top: 6, bottom: 6),
             child: Row(
