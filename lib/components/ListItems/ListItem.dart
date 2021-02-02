@@ -101,7 +101,7 @@ class IconVip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Image.asset('assets/images/icon_vip.png'),
+      child: Image.asset('assets/images/IconVIP.png'),
       height: 24,
       width: 24,
     );
